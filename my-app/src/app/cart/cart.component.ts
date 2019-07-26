@@ -21,6 +21,7 @@ export class CartComponent implements OnInit {
   price = 30;
 
   minusElement(){
+  // add comment
   this.count --
   this.priceTogether = this.priceTogether - this.price;
   
