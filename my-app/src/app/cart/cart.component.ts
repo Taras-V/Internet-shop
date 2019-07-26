@@ -17,8 +17,8 @@ export class CartComponent implements OnInit {
   }
   
   count = 1;
-  priceTogether = 35;
-  price = 30;
+  priceTogether = 25;
+  price = 25;
 
   minusElement(){
   // add comment
