@@ -1,0 +1,37 @@
+
+<div class="block_body">
+    <div class="title"><p>CART</p></div>
+    <div class="block_cart">
+        <div class="container_cart" >
+            <div class="product">
+                <div class="image">
+                    <img src="/assets/element_1.jpg" alt="">
+                </div>
+                <div class="title_product">
+                    <hr>
+                    <p>Name:</p>
+                </div>
+                <div class="price">
+                    <p>Price: $</p>
+                    <hr>
+                </div>
+                <div class="delite">
+                    <button (click)='deliteProduct()' class="delite_element">Delite</button>
+                </div>
+            </div>
+            <div class="adding_items">
+                <hr>
+                <button (click)='minusElement()'class="minus">-</button>
+                <input  type="number" class="inp " [value]="count">
+                <button (click)='plusElement()' class="plus">+</button>
+                <hr>
+            </div>
+            <div class="block_sum">
+                <p>Together: {{priceTogether}} $</p>
+            </div>
+            <div class="order">
+                <button class="order_btn" >Order</button>
+            </div>
+        </div>
+    </div>
+</div>

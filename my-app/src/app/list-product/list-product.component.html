@@ -1,0 +1,25 @@
+
+<div class="block_body">
+    <div class="title"><p>GOODS AND DESCRIPTION</p></div>
+    <div class="block_products">
+        <div *ngFor="let product of products" class="block_products-element">
+            <div class="photo">
+                <img src="{{ product.image }}" alt="watch">
+            </div>
+            <div class="title_product">
+                <p>{{product.name}}</p>
+            </div>
+            <div class="description"><p>{{product.label}}</p>
+                <hr>
+            </div>
+            <div class="price">
+                <p>Price: {{product.price}}$</p>
+                <hr>
+            </div>
+            <button class="in_cart" (click)="onAdd(product.id)">In Cart</button>
+        </div>
+    </div>
+</div>
+
+       
+        

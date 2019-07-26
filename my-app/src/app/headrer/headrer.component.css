@@ -1,0 +1,43 @@
+
+/* html, body{
+    font-family: 'Lobster', cursive;
+    font-family: 'Fascinate', cursive;
+    font-family: 'Indie Flower', cursive;
+    background-color: rgb(228, 222, 222);
+} */
+
+.head{
+    height: 78px;
+    background-color: rgb(199, 151, 151);
+   
+}
+.container_head{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 70px;
+    width: auto;
+    margin-top: 5px;
+}
+.menu ul {
+    display: flex;
+}
+.menu a{
+    font-family: 'Fascinate', cursive;
+    font-size: 19px;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.menu a:hover{
+    font-size: 21px;
+    color: aqua;
+}
+.contact p{
+    font-family: 'Fascinate', cursive;
+}
