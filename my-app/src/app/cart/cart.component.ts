@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
 
   minusElement(){
   this.count --
-   this.priceTogether = this.priceTogether - this.price;
+  this.priceTogether = this.priceTogether - this.price;
   
     console.log('-')
   };
@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
   plusElement(){
     console.log('+')
     this.count ++
-     this.priceTogether = this.priceTogether + this.price;
+    this.priceTogether = this.priceTogether + this.price;
     
   };
   
