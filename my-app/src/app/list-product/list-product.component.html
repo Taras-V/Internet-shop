@@ -16,7 +16,7 @@
                 <p>Price: {{product.price}}$</p>
                 <hr>
             </div>
-            <button class="in_cart" (click)="onAdd(product.id)">In Cart</button>
+            <button class="in_cart" (click)="onAdd(product.id)" [disabled]="product.isAdded">In Cart</button>
         </div>
     </div>
 </div>

@@ -10,7 +10,9 @@ export class ListProductComponent implements OnInit {
   @Input() productName;
   @Output() addProduct = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+
+   }
 
   products = [
     {
@@ -37,20 +39,34 @@ export class ListProductComponent implements OnInit {
     isAdded: false,
     image: '/assets/element_3.jpg'
    }
-   ]
+   ];
+
+   addedProducts: any[] = [];
    
 
   ngOnInit() {
+    this.addedProducts = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localStorage.getItem('products')) : [];
+   this.addedProducts.forEach(added => {
+    this.products = this.products.map(product => product.id === added.id ? added : product);
+   });
   }
 
   onAdd(id: Number) {
     this.products.map(product => {
       if(product.id === id) {
-        product.isAdded = !product.isAdded;
-        localStorage.setItem('products', JSON.stringify([{id: '1', name: 'article 1', image: '/assets/element_1.jpg'}]));
-      }
+        product.isAdded = !product.isAdded;      }
     })
     console.log(this.products);
+
+    this.addedProducts.push(this.products.find(product => product.id === id));
+
+    localStorage.setItem('products', JSON.stringify(this.addedProducts));
+
+    const product = null;
+
+}
+
+deleteProduct() {
 
 }
 

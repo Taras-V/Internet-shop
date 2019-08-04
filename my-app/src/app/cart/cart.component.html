@@ -2,17 +2,17 @@
 <div class="block_body">
     <div class="title"><p>CART</p></div>
     <div class="block_cart">
-        <div class="container_cart" >
+        <div class="container_cart" *ngFor="let product of addedProducts">
             <div class="product">
                 <div class="image">
                     <img src="/assets/element_1.jpg" alt="">
                 </div>
                 <div class="title_product">
                     <hr>
-                    <p>Name:</p>
+                    <p>Name: {{ product.name }}</p>
                 </div>
                 <div class="price">
-                    <p>Price: {{price}} $</p>
+                    <p>Price: {{product.price}} $</p>
                     <hr>
                 </div>
                 <div class="delite">

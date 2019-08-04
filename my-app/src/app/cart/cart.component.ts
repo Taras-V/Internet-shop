@@ -9,11 +9,14 @@ import { NgLocaleLocalization } from '@angular/common';
 })
 export class CartComponent implements OnInit {
 
+  addedProducts: any[] = [];
+
 
 
   constructor() { }
 
   ngOnInit() {
+    this.addedProducts = JSON.parse(localStorage.getItem('products'));
   }
   
   count = 1;
@@ -34,5 +37,8 @@ export class CartComponent implements OnInit {
     this.priceTogether = this.priceTogether + this.price;
     
   };
+  
+  
+    
   
 }
