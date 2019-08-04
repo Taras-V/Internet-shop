@@ -66,8 +66,8 @@ export class ListProductComponent implements OnInit {
 
 }
 
-deleteProduct() {
-
+deleteProduct(id) {
+  
 }
 
 

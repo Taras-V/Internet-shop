@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.addedProducts = JSON.parse(localStorage.getItem('products'));
+    this.addedProducts = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localStorage.getItem('products')) : [];
   }
   
   count = 1;
